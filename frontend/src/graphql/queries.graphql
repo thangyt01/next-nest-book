@@ -1,0 +1,41 @@
+query GetBooks {
+  books {
+    id
+    title
+    author
+    isbn
+  }
+}
+
+query Book($id: Int!){
+  book(id: $id) {
+    id
+    title
+    author
+    isbn
+  }
+}
+
+mutation CreateBook($createBookInput: CreateBookInput!) {
+  createBook(createBookInput: $createBookInput) {
+    id
+    title
+    author
+    isbn
+  }
+}
+
+mutation UpdateBook($updateBookInput: UpdateBookInput!){
+  updateBook(updateBookInput: $updateBookInput) {
+    id
+    title
+    author
+    isbn
+  }
+}
+
+mutation RemoveBook($id: Int!) {
+  removeBook(id: $id) {
+    id
+  }
+}

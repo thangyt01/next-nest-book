@@ -1,0 +1,16 @@
+overwrite: true
+schema: "http://localhost:3001/graphql"  # Adjust the URL to your GraphQL server
+documents: "src/graphql/**/*.graphql"
+generates:
+  src/generated/graphql.tsx:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"
+    config:
+      withHooks: true
+info:
+  title: "GraphQL Codegen"
+  description: "Generate TypeScript code from GraphQL schema and operations"
+  version: "1.0.0"
+ignoreNoDocuments: true
