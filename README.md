@@ -28,44 +28,44 @@ This project is built using NestJS, Next.js, Prisma, and GraphQL. It is designed
 1. Clone the repository
 
    ```bash
-   git clone https://github.com/yourusername/yourprojectname.git
+   git clone https://github.com/thangyt01/next-nest-book.git
    ```
 
 2. Cd to infra
 
-```bash
-cd infra
-```
+   ```bash
+   cd infra
+   ```
 
 3. Run docker compose
 
-```bash
-docker-compose up -d
-```
+   ```bash
+   docker-compose up -d
+   ```
 
 4. Run Prisma migrations in api container
 
-```bash
-docker exec -it infra-api-1 npx prisma migrate dev
-```
+   ```bash
+   docker exec -it infra-api-1 npx prisma migrate deploy
+   ```
 
 5. Generate GraphQL by codegen
 
-```bash
-cd frontend
-yarn generate
-```
+   ```bash
+   cd frontend
+   yarn generate
+   ```
 
 6. Visit http://demo2.localhost in your browser to view the application.
    **note:** To add virtual hosts like `demo1.localhost` and `demo2.localhost` to your `/etc/hosts` file on a Linux or macOS system, you can follow these steps:
 
-```bash
-sudo nano /etc/hosts
+   ```bash
+   sudo nano /etc/hosts
 
-# add this line
-127.0.0.1   demo1.localhost
-127.0.0.1   demo2.localhost
-```
+   # add this line
+   127.0.0.1   demo1.localhost
+   127.0.0.1   demo2.localhost
+   ```
 
 ## Usage
 
